@@ -15,7 +15,7 @@ body {
 
   h2 {
     font-size: 1.5em;
-    property: italic;
+    style: italic;
   }
 
   .job-title {
