@@ -1,0 +1,75 @@
+/* General styles - put these straight into your stylesheet */
+
+body {
+    margin: 0;
+  }
+  
+  html {
+    font-family: 'Helvetica neue', Arial, 'sans serif';
+    font-size: 10px;
+    background-color: #ccc;
+  }
+  
+  /* Selectors to be matched up with rulesets 
+  
+  .card article img
+  .card footer
+  .card header
+  .card
+  
+   Rulesets to be matched up with selectors */
+
+  
+   .card {
+    width: 35em;
+    height: 22em;
+    margin: 5em auto;
+    background-color: red; /*I think one of the errors was the british spelling of 'color'*/
+    border: 0.2em solid black;
+    border-radius: 1.5em;
+  }
+
+  .card header {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0.1), rgba(0,0,0,0));
+    border-radius: 1.5em 1.5em 0 0;
+  }
+
+  .card header, .card footer { /*to get 30px when the font size is 10px, you do (font size)x3*/
+    height: 3em; /* 30px content height in ems */
+    padding: 1em; /* 10px padding in ems */
+  }
+
+  h2 {
+    font-size: 2em; 
+    line-height: 1.5em;
+  }
+
+  h2, p {
+    margin: 0;
+  }
+
+  article{
+    height: 12em; /* beacause 10x12 is 120.*/
+    background-color: rgba(0, 0, 0, 0.3) /*rgba(red, green, blue, opacity('alpha')*/
+  }
+
+  article p{
+    color: white;
+    padding: 1em;
+  }
+
+  .card footer {
+    background-image: linear-gradient(to bottom,rgba(0,0,0,0), rgba(0,0,0,0.1));
+    border-radius: 0 0 1.5em 1.5em; /* this one should be the footer, the border is rounded on the two bottom sides. */ 
+  }
+  
+  footer p {
+    font-size: 1.5em; /* 10x1.5=15. 30/2 = 15. both hieght and size. */
+    line-height: 1.5em; 
+  }
+
+  .card article img {
+    max-height: 100%; /*other error was the lack of semicolon to close this max height line */
+    float: right; /* this has to be the img ruleset, float only applies to img afaik */
+  }
+  
