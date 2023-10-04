@@ -1,0 +1,12 @@
+.box {
+    border:2px dashed red; 
+/* border around the class 'box' in dashed red. */ 
+}
+
+.text {
+    border:2px dashed blue; 
+/* border around the class 'text' in dashed blue. */
+    padding: 20px
+/* creates 20px padding inside the text box, centering content */
+}
+

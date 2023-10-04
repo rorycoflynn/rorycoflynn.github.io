@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #ccc;
+}
+
+article {
+  width: 210mm;
+  height: 297mm;
+  margin: 20px auto;
+  position: relative;
+
+/** mine below **/
+  background-image: url(top-image.png);
+  background-color:white; 
+  border-top: 1mm solid red;
+  border-bottom: 1mm solid red;
+  background-image: url(bottom-image.png);
+  background-repeat:no-repeat;
+}
+
+address {
+  position: absolute;
+  bottom: 8mm;
+  right: 20mm;
+}
+
+h1 {
+  position: absolute;
+  top: 12mm;
+  left: 20mm;
+  width: 128px;
+  height: 128px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 44px 0;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+
+/** mine below **/
+  background-image: url(logo.png);
+  border-radius: 55%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 1); 
+  /** made the shadow bottom-right focused 
+  using the px of 4, 4, 8. made it a circle using border radius.
+  found when searching how to make stuff round in css. 
+  https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius **/
+}
+
+
+
+/**https://www.w3schools.com/howto/howto_css_overlay.asp
+tried using this. Really couldnt figure out why the 
+bottom img for the footer couldn't be affected by repeat rules. 
+tried making an "article::after" ruleset but that didnt work either.**/
+
+.overlayTop, .overlayBottom {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+} 
+
+.bottom-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /** this is to stick the image to the bottom of the article. because it was floating at the top before.**/
+}
+
+.overlayTop {
+  top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0))
+}
+
+.overlayBottom {
+  position: absolute;
+  bottom: 0;
+  background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5));
+}
