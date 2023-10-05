@@ -1,0 +1,58 @@
+.container {
+    position: fixed;
+}
+
+img {
+    position: fixed;
+    height: auto; 
+    width: 100%;
+    z-index: 1; 
+    /* the Z index helps me make sure
+    that this image at the 'back' layer. I found this 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/z-index 
+    because i was having trouble making the overlays actually be OVER*/
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#LIVEtitle { 
+    position:fixed;
+    z-index:4;
+    top: 1.25em;
+    left: 2em;
+    color: white;
+    font-size: 40px;
+}
+
+#newstitle {
+    position: fixed; 
+    z-index:5;
+    top: 2.5em;
+    left: 3em;
+    color: white;
+    font-size: 50px;
+}
+
+#overlayONE {
+    background-image: url("/wa/wa6/overlay1.png");
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+
+#overlayTWO {
+    background-image: url("/wa/wa6/overlay2.png");
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    top: 2em;
+    left: 60em;
+    background-size: 50%;
+}
