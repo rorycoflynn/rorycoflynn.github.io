@@ -38,6 +38,7 @@ img {
 }
 
 #overlayONE {
+    position:fixed;
     background-image: url("/wa/wa6/overlay1.png");
     z-index: 2;
     width: 100%;
@@ -47,6 +48,7 @@ img {
 
 
 #overlayTWO {
+    position:fixed;
     background-image: url("/wa/wa6/overlay2.png");
     z-index: 3;
     width: 100%;
