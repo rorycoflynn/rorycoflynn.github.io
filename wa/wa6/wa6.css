@@ -48,7 +48,7 @@ img {
 
 
 #overlayTWO {
-    position:relative;
+    position:fixed;
     background-image: url("/wa/wa6/overlay2.png");
     z-index: 3;
     width: 100%;
