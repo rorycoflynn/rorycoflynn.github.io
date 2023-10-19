@@ -1,0 +1,67 @@
+
+body{
+    font-family: 'Pixelify Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e6e6ea;
+}
+/*#f4f4f8    e6e6ea*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    background-color: #f4f4f8;
+    margin-top: 20px;
+    padding: 20px 0; 
+}
+
+nav a{
+    width:20vw;
+    text-align: center;
+    text-decoration: none;
+    color:black;
+}
+
+img{
+    width:40vw;
+    height:40vh;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+#red-ball{
+    background-color: red;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+}
+
+nav a:hover {
+    animation: wiggle 0.5s ease infinite; /* animation starts slowly = ease */
+}
+
+@keyframes wiggle {
+    0%, 100% {transform: translateX(0)}
+    25%      {transform: translateX(-5px)}
+    75%      {transform: translateX(5px)}
+}
+
+h1:hover { /* animation changes the color of the h1 text while hovering */
+    animation: changeColor 3s infinite; /* animation happens when hovering */
+}
+
+@keyframes changeColor {
+    0% { color: black; } /* Start with black */
+    25% { color: #fe4a49; } /* Then change to #fe4a49 */
+    50% { color: #2ab7ca; } /* Then change to #2ab7ca */
+    75% { color: #fed765; } /* change to #fed766 */
+    100% { color: black; } /* Start the cycle again */
+}
+
+.transitionable:hover {
+    opacity: 1; /*  opacity increases on hover.  */
+}
