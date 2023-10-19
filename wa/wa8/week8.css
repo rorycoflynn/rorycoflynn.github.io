@@ -25,23 +25,38 @@ nav a{
 
 img{
     width:40vw;
-    height:40vh;
+    height:50vh;
     opacity: 0.5;
     transition: opacity 0.3s;
 }
 
+img.transition {
+    width: 40vw;
+    height: 50vh;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.images-container {
+    display: flex;
+}
+
 #red-ball{
-    background-color: red;
-    width: 20px;
-    height:20px;
+    background-color: green;
+    width: 30px;
+    height: 30px; 
     border-radius: 50%;
     position: absolute;
-    left:5vw;
-    top:0;
+    left: 5vw;
+    top: 0;
+    animation: bounce 5s linear infinite; /* linear means its a constant speed
+    ie linear speed, and infinite says it goes on forever. 
+    */
+}
 }
 
 nav a:hover {
-    animation: wiggle 0.5s ease infinite; /* animation starts slowly = ease */
+    animation: wiggle 0.5s ease infinite; /* animation speed starts slowly = ease */
 }
 
 @keyframes wiggle {
@@ -62,6 +77,12 @@ h1:hover { /* animation changes the color of the h1 text while hovering */
     100% { color: black; } /* Start the cycle again */
 }
 
-.transitionable:hover {
+.transition:hover {
     opacity: 1; /*  opacity increases on hover.  */
 }
+
+@keyframes bounce {
+    0%, 100% {transform: translateY(0)}
+    50% {transform: translateY(-30px)} /* height of a bounce */
+    /* idk what to do with the ball so i made it bounce up and down lol */
+    }
