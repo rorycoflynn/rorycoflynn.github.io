@@ -53,20 +53,29 @@ img.transition {
     ie linear speed, and infinite says it goes on forever. 
     */
 }
-}
 
 nav a:hover {
     animation: wiggle 0.5s ease infinite; /* animation speed starts slowly = ease */
 }
 
-@keyframes wiggle {
-    0%, 100% {transform: translateX(0)}
-    25%      {transform: translateX(-5px)}
-    75%      {transform: translateX(5px)}
+.transition:hover {
+    opacity: 1; /*  opacity increases on hover.  */
 }
 
 h1:hover { /* animation changes the color of the h1 text while hovering */
     animation: changeColor 3s infinite; /* animation happens when hovering */
+}
+
+@keyframes bounce {
+    0%, 100% {transform: translateY(0)}
+    50% {transform: translateY(-30px)} /* height of a bounce */
+    /* idk what to do with the ball so i made it bounce up and down lol */
+    }
+
+@keyframes wiggle {
+    0%, 100% {transform: translateX(0)}
+    25%      {transform: translateX(-5px)}
+    75%      {transform: translateX(5px)}
 }
 
 @keyframes changeColor {
@@ -76,13 +85,3 @@ h1:hover { /* animation changes the color of the h1 text while hovering */
     75% { color: #fed765; } /* change to #fed766 */
     100% { color: black; } /* Start the cycle again */
 }
-
-.transition:hover {
-    opacity: 1; /*  opacity increases on hover.  */
-}
-
-@keyframes bounce {
-    0%, 100% {transform: translateY(0)}
-    50% {transform: translateY(-30px)} /* height of a bounce */
-    /* idk what to do with the ball so i made it bounce up and down lol */
-    }
