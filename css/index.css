@@ -1,121 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+/* for the fancy script logo thing I did*/
+/* from this link: */
+/*https://stackoverflow.com/questions/14676613/how-to-import-google-web-font-in-css-file*/
+
 body {
     font-family: 'Times New Roman';
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center vertically */
-    height: 100vh;
-}
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    width: 100%; /* Make the header span the full width */
-    margin-bottom: 20px; /* Add some space below the header */
-}
-
-header h1 {
-    margin: 0;
-}
-
-.intro {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    max-width: 800px; /* Limit the content width */
-    width: 100%;
-}
-
-.intro p { /*intro box text*/
-    margin: 0 0 10px;
-}
-
-.intro h2 {
-    margin: 0 0 10px
-}
-
-.cardBox {
-    display:flex
-}
-
-.concert {
-    display: flex;
-    flex: 1;
-    flex-wrap: wrap;
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    width: 5in; /* these dimensions come from index cards */
-    max-height: 3in; /* just bc I wanted to do that theme initially for fun */
-    overflow-y: auto;
-}
-
-
-.concert h2, .concert h3 {/*headers for concert boxes*/
-    margin-bottom: 10px;
-}
-
-.ConcertParagraph{
-    flex:4;
-    padding-right: 5px;
-}
-
-.infoColumn {
+  }
+  
+  header {
     background-color: lightgray;
-    flex: 3;
-    padding-left: 5px; /* Add padding to the right side */
-}
+    padding: 20px;
+  }
+  
+  nav {
+    background-color: lightgray;
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    transition: transform 0.5s;
+  }
+  
+  nav ul li a:hover {
+    transform: rotate(5deg);
+  }
+  
+  #buffer {
+    padding: 20px;
+  }
 
+  #superFancy {
+    font-family: 'Homemade Apple';
+    text-align: center;
+  }
 
-@media screen and (max-width: 800px) {
+  #cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card {
+    display:flex;
+    width: 600px;
+    border: black dotted;
+    margin-bottom: 10px;
+    height: 100%;
+    padding: 10px}
+  
+  .cardContent {
+    padding: 10px;
+    flex: 3;}
+
+  .cardContent p {
+    font-size: 12px;}
+
+  .infoColumn{
+    flex: 2;}
+
+  
+  @media (max-width: 400px) {
+    /*on a small screen everything will be all scrollable in one column*/
+    /* the scroll used to be only inside the cards box which was super weird and why I have so much code in here.*/
+
     body {
-        font-size: 14px;
-        background-color: lightcyan;
-    }
+        max-width: 100%;
+        background: lightgray;}
 
-    .intro {
-        display: block;
-        position: static; /* Set position to static */
-        max-width: 390px; /* 390 of 400px for the border! */
-        width: 100%;
-    }
-
-    .allConcertCards {
-        max-height: 800px;
-        overflow-y: auto;
-    }
-
-    .concert {
+    .card {
         display: flex;
-        flex-wrap: wrap;
-        background-color: #f9f9f9;
-        padding: 20px;
-        border: 1px solid #ccc;
-        max-width: 390px; /* Limit the content width */
-        width: 100%; /* Make sure the content is full-width within the max-width */
+        flex-direction: column;
+        gap: 10px;}
+
+    #cards {
+      flex-direction: column;
+      max-width: 100%;
+    }
+  
+    header h1{
+        justify-content: center;
+    }
+  
+    .card {
+      width: 100%; /*trying to use %s inside the small screen rulesets*/
+      padding: 0px;
+      height: 100%;
+      position:static;
+      background-color:lightCyan;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-right: 0;
+    }
+      
+    .cardContent {
+        flex: 1;
     }
 
-    .concert h2, .concert h3 {
-        margin-bottom: 10px;
+    .infoColumn{
+        font-size: 12px;
     }
 
-    .ConcertParagraph {
-        flex: 4;
-        padding-right: 5px;
-    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;}
+  }
 
-    .infoColumn {
+  @media (min-width: 1500px) {
+    body{
+        /*large screen is all gray so you can tell when its in effect*/
         background-color: lightgray;
-        flex: 3;
     }
-
-    .infoColumn {
-        padding-left: 5px; /* Add padding to the right side */
+    .cards {
+      display: flex;
+      flex-wrap: wrap; 
+      justify-content: space-between;
     }
-}
+  /* making the width 30% so I can make 3 columns in the flex boxes essentially. */
+    .card {
+      width: 30%; 
+      box-sizing: border-box; 
+      margin-bottom: 10px;
+    }
+  }
