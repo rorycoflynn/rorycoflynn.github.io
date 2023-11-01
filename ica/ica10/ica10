@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitty Clicker</title>
+    <link rel="stylesheet" href="ica10.css">
+</head>
+<body>
+    <div class="image-container">
+        <img id="kittyImage" src="cat.jpeg" alt="Kitty">
+    </div>
+    <button id="changeImage">Change Image</button>
+
+    <script src="ica10.js"></script>
+</body>
+</html>
