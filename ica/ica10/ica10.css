@@ -1,4 +1,4 @@
-/* styles.css */
+
 .image-container {
     display: flex;
     justify-content: center;
@@ -8,4 +8,13 @@
 img {
     max-width: 100%;
     height: auto;
+}
+
+button#changeImage {
+    border-top: 10px solid transparent; /* This creates a transparent top border */
+    position: fixed; /* Fixed positioning keeps the button in place even when scrolling */
+    top: 0; /* Position the button at the top of the viewport */
+    width: 100%; /* Make the button span the full width of the viewport */
+    background-color: #ffffff; /* Set the background color of the button */
+    text-align: center; /* Center the text within the button */
 }
