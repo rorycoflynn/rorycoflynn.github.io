@@ -7,10 +7,9 @@ body {
 header {
     font-family: 'Pixelify Sans', sans-serif;
     font-weight: bold;
-    font-size: 14 px; /* Adjust the font size to your preference */
-    color: gray; /* Slightly gray text color */
-    text-align: center; /* Center the text */
-    margin-bottom: 20px; /* Add some bottom margin for separation */
+    color: gray; 
+    text-align: center;
+    margin-bottom: 20px; 
 }
 
 .container {
