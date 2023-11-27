@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #container {
+      display: flex;
+    }
+
+    #text-boxes {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .row-input {
+      width: 160px;
+      box-sizing: border-box;
+      margin-bottom: 5px;
+    }
+
+    #tile-container {
+      height: 160px;
+      width: 200px; 
+      border: 1px solid #000;
+      font-family: monospace;
+      white-space: pre-wrap;
+      overflow: hidden;
+      margin-left: 10px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+  </style>
+  <title>Tile Builder</title>
+</head>
+<body>
+  <div id="container">
+    <div id="text-boxes">
+      <!-- Create 8 text boxes -->
+      <input type="text" class="row-input" placeholder="Row 1" oninput="updateTile(this)" maxlength="20">
+      <input type="text" class="row-input" placeholder="Row 2" oninput="updateTile(this)" maxlength="20">
+      <input type="text" class="row-input" placeholder="Row 3" oninput="updateTile(this)" maxlength="20">
+      <input type="text" class="row-input" placeholder="Row 4" oninput="updateTile(this)" maxlength="20">
+      <input type="text" class="row-input" placeholder="Row 5" oninput="updateTile(this)" maxlength="20">
+      <input type="text" class="row-input" placeholder="Row 6" oninput="updateTile(this)" maxlength="20">
+      <input type="text" class="row-input" placeholder="Row 7" oninput="updateTile(this)" maxlength="20">
+      <input type="text" class="row-input" placeholder="Row 8" oninput="updateTile(this)" maxlength="20">
+    </div>
+
+    <div id="tile-container"></div>
+  </div>
+
+  <script>
+    function updateTile(inputElement) {
+      // Get the input text from each row
+      const rows = document.getElementsByClassName('row-input');
+      let userInput = '';
+
+      for (let i = 0; i < rows.length; i++) {
+        userInput += rows[i].value + '\n';
+      }
+
+      // Trim the trailing newline character
+      userInput = userInput.trim();
+
+      // Display the formatted text in the tile container
+      const tileContainer = document.getElementById('tile-container');
+      tileContainer.textContent = userInput;
+    }
+
+    // Initial update when the page loads
+    updateTile();
+  </script>
+</body>
+</html>
