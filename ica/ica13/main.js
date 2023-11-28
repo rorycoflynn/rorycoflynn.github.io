@@ -79,7 +79,7 @@ class Ball {
 const balls = [];
 
 //while loop uses list of balls (as long as there are less than 26 obj in list, the loop will continue)
-while (balls.length < 25) {
+while (balls.length < 135) {
   const size = random(10, 20);
   const ball = new Ball(
     // ball position always drawn at least one ball width
