@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="jsFinal.css">
+  <title>Phone Number Slider</title>
+</head>
+<body>
+    <header>Super Inclusive Phone Number Slider</header>
+    
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <p> this phone number slider is super inclusive, with all phone numbers from (000)000-0000 to (999)-999-9999. this makes it accessible and easy to use, obviously! find your region, and you can use arrow keys to move one number at a time! </p>
+
+<div class="slidecontainer">
+  <input type="range" min="0" max="9999999999" value="0" class="slider" id="myRange">
+  <div id="digitImages"></div>
+  <button onclick="submitPhoneNumber()">Submit</button>
+</div>
+
+<div id="popup" class="popup">
+  <span class="close" onclick="closePopup()">&times;</span>
+  <p id="popupText"></p>
+  <button onclick="resetSlider()">Yes</button>
+  <button onclick="closePopup()">No</button>
+</div>
+
+<script src="jsFinal.js"></script>
+
+</body>
+</html>
